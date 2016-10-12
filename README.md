@@ -22,4 +22,4 @@ Below, all the snippets bundled in this extension.
 - swift-perfect-jsonconverter.json -> JSON Converter
 - swift-perfect-mustachetemplate.json -> Mustache Template Support for Perfect
 
-![image](https://github.com/lovemo/swift-prefect-snippets/demo.gif)
+![image](https://github.com/lovemo/swift-prefect-snippets/raw/master/demo.gif)
