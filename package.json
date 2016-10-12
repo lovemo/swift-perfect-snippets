@@ -2,10 +2,10 @@
     "name": "swift-perfect",
         "displayName": "swift-perfect",
         "description": "Visual Studio Code Snippets for Perfect Development",
-        "version": "0.0.4",
+        "version": "0.0.5",
         "publisher": "lovemo",
         "icon": "icon.png",
-        "homepage": "https://github.com/lovemo/swift-prefect-snippets",
+        "homepage": "https://github.com/lovemo/swift-perfect-snippets",
         "engines": {
             "vscode": "^0.10.6"
         },
@@ -15,7 +15,7 @@
             ],
         "repository": {
             "type": "git",
-            "url": "https://github.com/lovemo/swift-prefect-snippets.git"
+            "url": "https://github.com/lovemo/swift-perfect-snippets.git"
         },
         "contributes": {
             "snippets": [
