@@ -25,4 +25,4 @@ Below, all the snippets bundled in this extension.
 
 ---
 
-![image](https://github.com/lovemo/swift-prefect-snippets/raw/master/demo.gif)
+![image](https://github.com/lovemo/swift-perfect-snippets/raw/master/demo.gif)
