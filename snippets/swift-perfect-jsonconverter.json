@@ -1,0 +1,86 @@
+{
+    /// JSON Converter
+
+    /// Base for a custom object which can be converted to and from JSON.
+    // public class JSONConvertibleObject: JSONConvertible {
+    //     /// Default initializer.
+    //     public init() {}
+    //     /// Get the JSON keys/value.
+    //     public func setJSONValues(_ values:[String:Any]) {}
+    //     /// Set the object properties based on the JSON keys/values.
+    //     public func getJSONValues() -> [String:Any] { return [String:Any]() }
+    //     /// Encode the object into JSON text
+    //     public func jsonEncodedString() throws -> String {
+    //         return try self.getJSONValues().jsonEncodedString()
+    //     }
+    // }
+    /// Get the JSON keys/value.
+    "Get the JSON keys/value.": {
+		"prefix": "setJSONValues",
+		"body": [
+			"override func setJSONValues(_ values: [String : Any]) {\n\t$1\n}"
+		],
+		"description": "Get the JSON keys/value."
+	},
+	/// Set the object properties based on the JSON keys/values.
+	"Set the object properties based on the JSON keys/values.": {
+		"prefix": "getJSONValues",
+		"body": [
+			"override func getJSONValues() -> [String : Any] {\n\treturn [\n\t\t$1\n\t]\n}"
+		],
+		"description": "Set the object properties based on the JSON keys/values."
+	},
+	/// Encode the object into JSON text
+	"Encode the object into JSON text.": {
+		"prefix": "jsonEncodedString",
+		"body": [
+			"jsonEncodedString()"
+		],
+		"description": "Encode the object into JSON text."
+	},
+    // public class JSONDecoding {
+    //     /// Function which returns a new instance of a custom object which will have its members set based on the JSON data.
+    //     public typealias JSONConvertibleObjectCreator = () -> JSONConvertibleObject
+    //     static public func registerJSONDecodable(name: String, creator: JSONConvertibleObjectCreator)
+    // }
+	"Function which returns a new instance of a custom object which will have its members set based on the JSON data.": {
+		"prefix": "registerJSONDecodable",
+		"body": [
+			"registerJSONDecodable(name: ${1:String}, creator: { return ${2:JSONConvertibleObjectCreator} })"
+		],
+		"description": "Function which returns a new instance of a custom object which will have its members set based on the JSON data."
+	},
+    /// An error occurring during JSON conversion.
+    // public enum JSONConversionError: ErrorProtocol {
+    //     /// The object did not suppport JSON conversion.
+    //     case notConvertible(Any)
+    //     /// A provided key was not a String.
+    //     case invalidKey(Any)
+    //     /// The JSON text contained a syntax error.
+    //     case syntaxError
+    // }
+    /// The object did not suppport JSON conversion.
+	"The object did not suppport JSON conversion(var).": {
+		"prefix": "JSONConversionError",
+		"body": [
+			".notConvertible"
+		],
+		"description": "The object did not suppport JSON conversion(var)."
+	},
+    /// A provided key was not a String.
+	"A provided key was not a String(var).": {
+		"prefix": "JSONConversionError",
+		"body": [
+			".invalidKey"
+		],
+		"description": "A provided key was not a String(var)."
+	},
+    /// The JSON text contained a syntax error.
+		"The JSON text contained a syntax error(var).": {
+		"prefix": "JSONConversionError",
+		"body": [
+			".syntaxError"
+		],
+		"description": "The JSON text contained a syntax error(var)."
+	}
+}

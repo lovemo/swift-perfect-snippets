@@ -1,0 +1,32 @@
+{
+    /// Module
+    
+ 	"PerfectLib": {
+		"prefix": "Perfect",
+		"body": [
+			"PerfectLib"
+		],
+		"description": "PerfectLib"
+	},
+	 "PerfectHTTP": {
+		"prefix": "Perfect",
+		"body": [
+			"PerfectHTTP"
+		],
+		"description": "PerfectHTTP"
+	},
+	 "PerfectHTTPServer": {
+		"prefix": "Perfect",
+		"body": [
+			"PerfectHTTPServer"
+		],
+		"description": "PerfectHTTPServer"
+	},
+	 "HTTPServer": {
+		"prefix": "HTTPServer",
+		"body": [
+			"HTTPServer($1);"
+		],
+		"description": "HTTPServer"
+	}
+}

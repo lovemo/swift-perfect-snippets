@@ -1,0 +1,156 @@
+{
+    /// HTTPResponse
+
+    /// The HTTP response status.
+    /// var status: HTTPResponseStatus { get set }
+	"The HTTP response status(var).": {
+		"prefix": "status",
+		"body": [
+			"status"
+		],
+		"description": "The HTTP response status(var)."
+	},
+    /// Returns the requested outgoing header value.
+    /// func header(_ named: HTTPResponseHeader.Name) -> String?
+	 "Returns the requested outgoing header value.": {
+		"prefix": "header",
+		"body": [
+			"header(${1:HTTPResponseHeader.Name})"
+		],
+		"description": "Returns the requested outgoing header value."
+	},
+    /// Add a header to the outgoing response.
+    /// No check for duplicate or repeated headers will be made.
+    /// func addHeader(_ named: HTTPResponseHeader.Name, value: String)
+	 "Add a header to the outgoing response.": {
+		"prefix": "addHeader",
+		"body": [
+			"addHeader(${1:HTTPResponseHeader.Name}, value: ${2:String})"
+		],
+		"description": "Add a header to the outgoing response."
+	},
+    /// Set the indicated header value. 
+    /// If the header already exists then the existing value will be replaced.
+    /// func setHeader(_ named: HTTPResponseHeader.Name, value: String)
+	 "Set the indicated header value.(HTTPResponse)": {
+		"prefix": "setHeader",
+		"body": [
+			"setHeader(${1:HTTPResponseHeader.Name}, value: ${2:String})"
+		],
+		"description": "Set the indicated header value.(HTTPResponse)"
+	},
+    /// Provide access to all current header values.
+    /// var headers: AnyIterator<(HTTPResponseHeader.Name, String)> { get }
+	"Provide access to all current header values(var).(HTTPResponse)": {
+		"prefix": "headers",
+		"body": [
+			"headers"
+		],
+		"description": "Provide access to all current header values(var).(HTTPResponse)"
+	},
+    /// This bundles together the values which will be used to set a cookie in the outgoing response
+	 "Cookie public initializer": {
+		"prefix": "HTTPCookie",
+		"body": [
+			"HTTPCookie(name: ${1:String},\n\t\tvalue: ${2:String},\n\t\tdomain: ${3:String?},\n\t\texpires: ${4:Expiration?},\n\t\tpath: {5:String?},\n\t\tsecure: ${6:Bool?},\n\t\thttpOnly: ${7:Bool?})"
+		],
+		"description": "Cookie public initializer."
+	},
+    /// Add a cookie to the outgoing response.
+    /// func addCookie(_ cookie: HTTPCookie)
+	 "Add a cookie to the outgoing response.": {
+		"prefix": "addCookie",
+		"body": [
+			"addCookie(cookie: ${1:HTTPCookie})"
+		],
+		"description": "Add a cookie to the outgoing response."
+	},
+    /// Body data waiting to be sent to the client.
+    /// This will be emptied after each chunk is sent.
+    /// var bodyBytes: [UInt8] { get set }
+	"Body data waiting to be sent to the client(var).": {
+		"prefix": "bodyBytes",
+		"body": [
+			"bodyBytes"
+		],
+		"description": "Body data waiting to be sent to the client(var)."
+	},
+    /// Append data to the bodyBytes member.
+    /// func appendBody(bytes: [UInt8])
+	 "Append data to the bodyBytes member.": {
+		"prefix": "appendBody",
+		"body": [
+			"appendBody(bytes: ${1:[UInt8]})"
+		],
+		"description": "Append data to the bodyBytes member."
+	},
+    /// Append String data to the outgoing response.
+    /// All such data will be converted to a UTF-8 encoded [UInt8]
+    /// func appendBody(string: String)
+	 "Append String data to the outgoing response.": {
+		"prefix": "appendBody",
+		"body": [
+			"appendBody(string: ${1:String})"
+		],
+		"description": "Append String data to the outgoing response."
+	},
+    /// Set the bodyBytes member, clearing out any existing data.
+    /// func setBody(bytes: [UInt8])
+	 "Set the bodyBytes member, clearing out any existing data.": {
+		"prefix": "setBody",
+		"body": [
+			"setBody(bytes: ${1:[UInt8]})"
+		],
+		"description": "Set the bodyBytes member, clearing out any existing data."
+	},
+    /// Set the String data of the outgoing response, clearing out any existing data.
+    /// All such data will be converted to a UTF-8 encoded [UInt8]
+    /// func setBody(string: String)
+	 "Set the String data of the outgoing response, clearing out any existing data.": {
+		"prefix": "setBody",
+		"body": [
+			"setBody(string: ${1:String})"
+		],
+		"description": "Set the String data of the outgoing response, clearing out any existing data."
+	},
+    /// Encodes the Dictionary as a JSON string and converts that to a UTF-8 encoded [UInt8]
+    /// func setBody(json: [String:Any]) throws
+	 "Encodes the Dictionary as a JSON string and converts that to a UTF-8 encoded [UInt8].": {
+		"prefix": "setBody",
+		"body": [
+			"setBody(json: ${1:[String:Any]})"
+		],
+		"description": "Encodes the Dictionary as a JSON string and converts that to a UTF-8 encoded [UInt8]."
+	},
+    /// Push all currently available headers and body data to the client.
+    /// May be called multiple times.
+    /// func push(callback: (Bool) -> ())
+	 "Push all currently available headers and body data to the client.": {
+		"prefix": "push",
+		"body": [
+			"push{(${1:Bool}) in \n\t$2\n}}"
+		],
+		"description": "Push all currently available headers and body data to the client."
+	},
+    /// Indicate that the response should attempt to stream all outgoing data.
+    /// This is primarily used when the resulting content length can not be known.
+    /// var isStreaming: Bool { get set }
+	"Indicate that the response should attempt to stream all outgoing data(var).": {
+		"prefix": "isStreaming",
+		"body": [
+			"isStreaming"
+		],
+		"description": "Indicate that the response should attempt to stream all outgoing data(var)."
+	},
+    /// Indicate that the request has completed.
+    /// Any currently available headers and body data will be pushed to the client.
+    /// No further request related activities should be performed after calling this.
+    /// func completed()
+    "Indicate that the request has completed.": {
+		"prefix": "completed",
+		"body": [
+			"completed($1)"
+		],
+		"description": "Indicate that the request has completed."
+	}
+}

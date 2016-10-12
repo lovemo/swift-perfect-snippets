@@ -1,0 +1,72 @@
+{
+    /// Routing
+    
+	/// Function which receives request and response objects and generates content.
+	/// public typealias RequestHandler = (HTTPRequest, HTTPResponse) -> ()
+	/// Initialize with no baseUri.
+	 "Initialize with no baseUri.": {
+		"prefix": "Routes",
+		"body": [
+			"Routes($1);"
+		],
+		"description": "Initialize with no baseUri."
+	},
+    /// Initialize with a baseUri.
+	 "Initialize with a baseUri.": {
+		"prefix": "Routes",
+		"body": [
+			"Routes(baseUri: ${1:String})"
+		],
+		"description": "Initialize with a baseUri."
+	},
+    /// Add all the routes in the Routes object to this one.
+	 "Add all the routes in the Routes object to this one.": {
+		"prefix": "add",
+		"body": [
+			"add(routes: ${1:Routes})"
+		],
+		"description": "Add all the routes in the Routes object to this one."
+	},
+    /// Add the given method, uri and handler as a route.
+	 "Add the given method, uri and handler as a route.": {
+		"prefix": "add",
+		"body": [
+			"add(method: ${1:HTTPMethod}, uri: ${2:String}, handler: {\n\t${3:HTTPRequest}, ${4:HTTPResponse} in \n\t$5\n})"
+		],
+		"description": "Add the given method, uri and handler as a route."
+	},
+    /// Add the given method, uris and handler as a route.
+	 "Add the given method, uris and handler as a route.": {
+		"prefix": "add",
+		"body": [
+			"add(method: ${1:HTTPMethod}, uris: ${2:[String]}, handler: {\n\t${3:HTTPRequest}, ${4:HTTPResponse} in \n\t$5\n})"
+		],
+		"description": "Add the given method, uris and handler as a route."
+	},
+    /// Add the given uri and handler as a route. 
+    /// This will add the route got both GET and POST methods.
+	 "This will add the route got both GET and POST methods(uri).": {
+		"prefix": "add",
+		"body": [
+			"add(uri: ${1:String}, handler: {\n\t${2:HTTPRequest}, ${3:HTTPResponse} in \n\t$4\n})"
+		],
+		"description": "This will add the route got both GET and POST methods(uri)."
+	},
+    /// Add the given method, uris and handler as a route.
+    /// This will add the route got both GET and POST methods.
+	 "This will add the route got both GET and POST methods(uris).": {
+		"prefix": "add",
+		"body": [
+			"add(uris: ${1:[String]}, handler: {\n\t${2:HTTPRequest}, ${3:HTTPResponse} in \n\t$4\n})"
+		],
+		"description": "This will add the route got both GET and POST methods(uris)."
+	},
+    /// Add one Route to this object.
+	"Add one Route to this object.": {
+		"prefix": "add",
+		"body": [
+			"add(route: ${1:Route})"
+		],
+		"description": "Add one Route to this object."
+	}
+}

@@ -1,0 +1,19 @@
+{
+    /// Mustache Template Support for Perfect
+    
+    /// A mustache handler, which should be passed to `mustacheRequest`, generates values to fill a mustache template
+    /// Call `context.extendValues(with: values)` one or more times and then
+    /// `context.requestCompleted(withCollector collector)` to complete the request and output the resulting content to the client.
+    // public protocol MustachePageHandler {
+    //     /// Called by the system when the handler needs to add values for the template.
+    //     func extendValuesForResponse(context contxt: MustacheWebEvaluationContext, collector: MustacheEvaluationOutputCollector)
+    // }
+    /// Called by the system when the handler needs to add values for the template.
+	"Called by the system when the handler needs to add values for the template.": {
+		"prefix": "extendValuesForResponse",
+		"body": [
+			"func extendValuesForResponse(context contxt: MustacheWebEvaluationContext, collector: MustacheEvaluationOutputCollector) {\n\t$1\n}"
+		],
+		"description": "Called by the system when the handler needs to add values for the template."
+	}
+}

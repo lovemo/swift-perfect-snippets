@@ -1,0 +1,161 @@
+{
+    /// HTTPRequest
+
+	/// The IP address and connecting port of the client.
+	/// var remoteAddress: (host: String, port: UInt16) { get }
+	"The IP address and connecting port of the client(var).": {
+		"prefix": "remoteAddress",
+		"body": [
+			"remoteAddress"
+		],
+		"description": "The IP address and connecting port of the client(var)."
+	},
+	/// The IP address and listening port for the server.
+	/// var serverAddress: (host: String, port: UInt16) { get }
+	"The IP address and listening port for the server(var).": {
+		"prefix": "serverAddress",
+		"body": [
+			"serverAddress"
+		],
+		"description": "The IP address and listening port for the server(var)."
+	},
+	/// The canonical name for the server.
+	/// var serverName: String { get }
+	"The canonical name for the server(var).": {
+		"prefix": "serverName",
+		"body": [
+			"serverName"
+		],
+		"description": "The canonical name for the server(var)."
+	},
+	/// The server's document root from which static file content will generally be served.
+	/// var documentRoot: String { get }
+	"The server's document root from which static file content will generally be served(var).": {
+		"prefix": "documentRoot",
+		"body": [
+			"documentRoot"
+		],
+		"description": "The server's document root from which static file content will generally be served(var)."
+	},
+    /// The HTTP request method.
+    /// var method: HTTPMethod { get set }
+	"The HTTP request method(var).": {
+		"prefix": "HTTPMethod",
+		"body": [
+			"HTTPMethod"
+		],
+		"description": "The HTTP request method(var)."
+	},
+    /// The request path.
+    /// var path: String { get set }
+	"The request path(var).": {
+		"prefix": "path",
+		"body": [
+			"path"
+		],
+		"description": "The request path(var)."
+	},
+    /// The parsed and decoded query/search arguments.
+    /// var queryParams: [(String, String)] { get }
+	"The parsed and decoded query/search arguments(var).": {
+		"prefix": "queryParams",
+		"body": [
+			"queryParams"
+		],
+		"description": "The parsed and decoded query/search arguments(var)."
+	},
+    /// The HTTP protocol version. For example (1, 0), (1, 1), (2, 0)
+    /// var protocolVersion: (Int, Int) { get }
+	"The HTTP protocol version. For example (1, 0), (1, 1), (2, 0)(var).": {
+		"prefix": "protocolVersion",
+		"body": [
+			"protocolVersion"
+		],
+		"description": "The HTTP protocol version. For example (1, 0), (1, 1), (2, 0)(var)."
+	},
+    /// Any URL variables acquired during routing the path to the request handler.
+    /// var urlVariables: [String:String] { get set }
+	"Any URL variables acquired during routing the path to the request handler(var).": {
+		"prefix": "urlVariables",
+		"body": [
+			"urlVariables"
+		],
+		"description": "Any URL variables acquired during routing the path to the request handler(var)."
+	},
+    /// Returns the full request URI.
+    /// var uri: String { get }
+	"Returns the full request URI(var).": {
+		"prefix": "uri",
+		"body": [
+			"uri"
+		],
+		"description": "Returns the full request URI(var)."
+	},
+    /// Returns the requested incoming header value.
+    /// func header(_ named: HTTPRequestHeader.Name) -> String?
+	 "Returns the requested incoming header value.": {
+		"prefix": "header",
+		"body": [
+			"header(${1:HTTPRequestHeader.Name})"
+		],
+		"description": "Returns the requested incoming header value."
+	},
+    /// Add a header to the response.
+    /// No check for duplicate or repeated headers will be made.
+    /// func addHeader(_ named: HTTPRequestHeader.Name, value: String)
+	 "Add a header to the response.": {
+		"prefix": "addHeader",
+		"body": [
+			"addHeader(${1:HTTPRequestHeader.Name}, value: ${2:String})"
+		],
+		"description": "Add a header to the response."
+	},
+    /// Set the indicated header value.
+    /// If the header already exists then the existing value will be replaced.
+    /// func setHeader(_ named: HTTPRequestHeader.Name, value: String)
+	 "Set the indicated header value.(HTTPRequest)": {
+		"prefix": "setHeader",
+		"body": [
+			"setHeader(${1:HTTPRequestHeader.Name}, value: ${2:String})"
+		],
+		"description": "Set the indicated header value.(HTTPRequest)"
+	},
+    /// Provide access to all current header values.
+    /// var headers: AnyIterator<(HTTPRequestHeader.Name, String)> { get }
+	"Provide access to all current header values(var).": {
+		"prefix": "headers",
+		"body": [
+			"headers"
+		],
+		"description": "Provide access to all current header values(var)."
+	},
+    /// Returns all the cookie name/value pairs parsed from the request.
+    /// var cookies: [(String, String)] 
+	"Returns all the cookie name/value pairs parsed from the request(var).": {
+		"prefix": "cookies",
+		"body": [
+			"cookies"
+		],
+		"description": "Returns all the cookie name/value pairs parsed from the request(var)."
+	},
+    /// POST body data as raw bytes.
+    /// If the POST content type is multipart/form-data then this will be nil.
+    /// var postBodyBytes: [UInt8]? { get set }
+	"POST body data as raw bytes(var).": {
+		"prefix": "postBodyBytes",
+		"body": [
+			"postBodyBytes"
+		],
+		"description": "POST body data as raw bytes(var)."
+	},
+    /// POST body data treated as UTF-8 bytes and decoded into a String, if possible.
+    /// If the POST content type is multipart/form-data then this will be nil.
+    /// var postBodyString: String? { get }
+	"POST body data treated as UTF-8 bytes and decoded into a String, if possible(var).": {
+		"prefix": "postBodyString",
+		"body": [
+			"postBodyString"
+		],
+		"description": "POST body data treated as UTF-8 bytes and decoded into a String, if possible(var)."
+	}
+}

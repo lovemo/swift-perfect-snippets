@@ -1,0 +1,51 @@
+{
+    "name": "swift-perfect",
+        "displayName": "swift-perfect",
+        "description": "Visual Studio Code Snippets for Perfect Development",
+        "version": "0.0.1",
+        "publisher": "lovemo",
+        "icon": "icon.png",
+        "homepage": "https://github.com/lovemo/swift-prefect-snippets",
+        "engines": {
+            "vscode": "^0.10.6"
+        },
+        "keywords":["ios", "swift", "perfect", "server", "completion", "snippets"],
+        "categories": [
+            "Snippets"
+            ],
+        "repository": {
+            "type": "git",
+            "url": "https://github.com/lovemo/swift-prefect-snippets.git"
+        },
+        "contributes": {
+            "snippets": [
+            {
+                "language": "swift",
+                "path": "./snippets/swift-perfect-filters.json"
+            },
+            {
+                "language": "swift",
+                "path": "./snippets/swift-perfect-httprequest.json"
+            },
+            {
+                "language": "swift",
+                "path": "./snippets/swift-perfect-httpresponse.json"
+            },
+            {
+                "language": "swift",
+                "path": "./snippets/swift-perfect-jsonconverter.json"
+            },
+            {
+                "language": "swift",
+                "path": "./snippets/swift-perfect-module.json"
+            },
+            {
+                "language": "swift",
+                "path": "./snippets/swift-perfect-mustachetemplate.json"
+            },   {
+                "language": "swift",
+                "path": "./snippets/swift-perfect-routing.json"
+            }
+            ]
+        }
+}

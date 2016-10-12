@@ -1,0 +1,115 @@
+{
+    /// Request and Response Filters
+
+    /// A filter which can be called to modify a HTTPRequest.
+    // public protocol HTTPRequestFilter {
+    //     /// Called once after the request has been read but before any handler is executed.
+    //     func filter(request: HTTPRequest, response: HTTPResponse, callback: (HTTPRequestFilterResult) -> ())
+    // }
+    "<HTTPRequestFilter>Called once after the request has been read but before any handler is executed.": {
+		"prefix": "filter",
+		"body": [
+			"func filter(request: HTTPRequest, response: HTTPResponse, callback: (HTTPRequestFilterResult) -> {\n\t$1\n\tcallback(${2:HTTPRequestFilterResult})\n}"
+		],
+		"description": "<HTTPRequestFilter>Called once after the request has been read but before any handler is executed."
+	},
+    /// Result from one filter.
+    // public enum HTTPRequestFilterResult {
+    //     /// Continue with filtering.
+    //     case `continue`(HTTPRequest, HTTPResponse)
+    //     /// Halt and finalize the request. Handler is not run.
+    //     case halt(HTTPRequest, HTTPResponse)
+    //     /// Stop filtering and execute the request.
+    //     /// No other filters at the current priority level will be executed.
+    //     case execute(HTTPRequest, HTTPResponse)
+    // }
+    /// Continue with filtering.
+	"Continue with filtering(var).(HTTPRequestFilterResult)": {
+		"prefix": "HTTPRequestFilterResult",
+		"body": [
+			".continue(${1:request}, ${2:response})"
+		],
+		"description": "Continue with filtering(var)."
+	},
+    /// Halt and finalize the request. Handler is not run.
+	"Halt and finalize the request. Handler is not run(var).(HTTPRequestFilterResult)": {
+		"prefix": "HTTPRequestFilterResult",
+		"body": [
+			".halt(${1:request}, ${2:response})"
+		],
+		"description": "Halt and finalize the request. Handler is not run.(var)."
+	},
+    /// Stop filtering and execute the request.
+		"Stop filtering and execute the request(var).(HTTPRequestFilterResult)": {
+		"prefix": "HTTPRequestFilterResult",
+		"body": [
+			".execute(${1:request}, ${2:response})"
+		],
+		"description": "Stop filtering and execute the request(var)."
+	},
+    /// A filter which can be called to modify a HTTPResponse.
+    // public protocol HTTPResponseFilter {
+    //     /// Called once before headers are sent to the client.
+    //     func filterHeaders(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ())
+    //     /// Called zero or more times for each bit of body data which is sent to the client.
+    //     func filterBody(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> ())
+    // }
+    "<HTTPResponseFilter>Called once before headers are sent to the client.": {
+		"prefix": "filterHeaders",
+		"body": [
+			"func filterHeaders(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> \n\t$1\n\t{callback(${2:HTTPResponseFilterResult})\n}"
+		],
+		"description": "<HTTPRequestFilter>Called once before headers are sent to the client."
+	},
+	"<HTTPResponseFilter>Called zero or more times for each bit of body data which is sent to the client.": {
+		"prefix": "filterBody",
+		"body": [
+			"func filterBody(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> \n\t$1\n\t{callback(${2:HTTPResponseFilterResult})\n}"
+		],
+		"description": "<HTTPRequestFilter>Called zero or more times for each bit of body data which is sent to the client."
+	},
+    /// Response from one filter.
+    // public enum HTTPResponseFilterResult {
+    //     /// Continue with filtering.
+    //     case `continue`
+    //     /// Stop executing filters until the next push.
+    //     case done
+    //     /// Halt and close the request.
+    //     case halt
+    // }
+    /// Continue with filtering.
+	"Continue with filtering(var).(HTTPResponseFilterResult)": {
+		"prefix": "HTTPResponseFilterResult",
+		"body": [
+			".continue"
+		],
+		"description": "Continue with filtering(var)."
+	},
+    /// Stop executing filters until the next push.
+	"Stop executing filters until the next push(var).(HTTPResponseFilterResult)": {
+		"prefix": "HTTPResponseFilterResult",
+		"body": [
+			".done"
+		],
+		"description": "Stop executing filters until the next push.(var)."
+	},
+    /// Halt and close the request.
+		"Halt and close the request(var).(HTTPResponseFilterResult)": {
+		"prefix": "HTTPResponseFilterResult",
+		"body": [
+			".halt"
+		],
+		"description": "Halt and close the request(var)."
+	},
+    /// Response filters are set directly on the server and given as an array of filter and priority tuples.
+    // public class HTTPServer {
+    //     public func setResponseFilters(_ response: [(HTTPResponseFilter, HTTPFilterPriority)]) -> HTTPServer
+    // }
+    "Response filters are set directly on the server and given as an array of filter and priority tuples.": {
+		"prefix": "setResponseFilters",
+		"body": [
+			"setResponseFilters(${1:[(HTTPResponseFilter, HTTPFilterPriority)]})"
+		],
+		"description": "Response filters are set directly on the server and given as an array of filter and priority tuples."
+	}
+}
