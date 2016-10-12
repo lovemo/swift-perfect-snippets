@@ -9,7 +9,7 @@ Perfect is a complete and powerful toolbox, framework, and application server fo
 - Perfect Docs - http://www.perfect.org/docs/index.html
 
 ### Usage
-To install this extension, launch VS Code Quick Open (⌘+P), paste ext install swift-prefect-snippets and press enter.
+To install this extension, launch VS Code and Open Extensions, paste ext install swift-prefect-snippets and press enter.
 
 Below, all the snippets bundled in this extension.
 
