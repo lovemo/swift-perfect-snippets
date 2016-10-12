@@ -1,7 +1,8 @@
-# swift-prefect-snippets
+# swift-perfect-snippets
 ---
+Github:https://github.com/lovemo/swift-perfect-snippets
 
-**swift-prefect-snippets** is a collection of code snippets for Perfect development. And since Visual Studio Code already provides support Swift and Perfect, this extension is all you need to start coding.
+**swift-perfect-snippets** is a collection of code snippets for Perfect development. And since Visual Studio Code already provides support Swift and Perfect, this extension is all you need to start coding.
 
 Perfect is a complete and powerful toolbox, framework, and application server for Linux, iOS, and macOS (OS X). It provides everything a Swift engineer needs for developing lightweight, maintainable, and scalable apps and other REST services entirely in the Swift programming language for both client-facing and server-side applications.
 
