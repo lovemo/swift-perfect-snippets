@@ -14,10 +14,11 @@ To install this extension, launch VS Code Quick Open (⌘+P), paste ext install 
 Below, all the snippets bundled in this extension.
 
 ### Swift
-- swift-perfect-filters.json -> Request and Response Filters
+- swift-perfect-module.json -> Module
+- swift-perfect-routing.json -> Routing
 - swift-perfect-httprequest.json -> HTTPRequest
 - swift-perfect-httpresponse.json -> HTTPResponse
+- swift-perfect-filters.json -> Request and Response Filters
 - swift-perfect-jsonconverter.json -> JSON Converter
-- swift-perfect-module.json -> Module
 - swift-perfect-mustachetemplate.json -> Mustache Template Support for Perfect
-- swift-perfect-routing.json -> Routing
+
