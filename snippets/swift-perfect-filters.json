@@ -57,14 +57,14 @@
     "<HTTPResponseFilter>Called once before headers are sent to the client.": {
 		"prefix": "filterHeaders",
 		"body": [
-			"func filterHeaders(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> \n\t$1\n\t{callback(${2:HTTPResponseFilterResult})\n}"
+			"func filterHeaders(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> {\n\t$1\n\tcallback(${2:HTTPResponseFilterResult})\n}"
 		],
 		"description": "<HTTPRequestFilter>Called once before headers are sent to the client."
 	},
 	"<HTTPResponseFilter>Called zero or more times for each bit of body data which is sent to the client.": {
 		"prefix": "filterBody",
 		"body": [
-			"func filterBody(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> \n\t$1\n\t{callback(${2:HTTPResponseFilterResult})\n}"
+			"func filterBody(response: HTTPResponse, callback: (HTTPResponseFilterResult) -> {\n\t$1\n\tcallback(${2:HTTPResponseFilterResult})\n}"
 		],
 		"description": "<HTTPRequestFilter>Called zero or more times for each bit of body data which is sent to the client."
 	},

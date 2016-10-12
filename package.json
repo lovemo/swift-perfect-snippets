@@ -2,7 +2,7 @@
     "name": "swift-perfect",
         "displayName": "swift-perfect",
         "description": "Visual Studio Code Snippets for Perfect Development",
-        "version": "0.0.2",
+        "version": "0.0.3",
         "publisher": "lovemo",
         "icon": "icon.png",
         "homepage": "https://github.com/lovemo/swift-prefect-snippets",
