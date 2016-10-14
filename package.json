@@ -1,7 +1,7 @@
 {
     "name": "swift-perfect",
         "displayName": "swift-perfect",
-        "description": "Visual Studio Code Snippets for Perfect Development",
+        "description": "Perfect:Server-Side Swift",
         "version": "0.0.5",
         "publisher": "lovemo",
         "icon": "icon.png",
