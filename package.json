@@ -2,7 +2,7 @@
     "name": "swift-perfect",
         "displayName": "swift-perfect",
         "description": "Perfect:Server-Side Swift",
-        "version": "0.0.5",
+        "version": "0.0.6",
         "publisher": "lovemo",
         "icon": "icon.png",
         "homepage": "https://github.com/lovemo/swift-perfect-snippets",
